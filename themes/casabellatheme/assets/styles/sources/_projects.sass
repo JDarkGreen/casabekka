@@ -13,44 +13,11 @@
 /*
  * Item Preview de Projecto
  */
-.itemProjectPreview
-	border: 1px solid #EFEFEF
-	width : 100%
 
-	.featured-image
-		height  : 275px
-		overflow: hidden
-		img 
-			+transition( all 700ms ease )
-		//:hover
-		&:hover 
-			img 
-				+scale(1.1)
-	.container-text
-		padding : 12px 0
-		h2 
-			color      : #545454
-			font-size  : 23px 
-			font-weight: 700
-			margin     : 0 auto 7px
-		p.excerpt
-			font-size: 15px
-			height   : 40px 
-
-/* Items Alineación en Página */
-.itemProjectPreview--box
-	box-sizing: border-box
-	margin    : 0 10px 25px 0
-	max-width : calc( 100%/4 - (3*10px) / 4 )
-	min-height: 353px
-
-	//Tercer y ultimos elementos
-	&:last-child , &:nth-child(4n)
-		margin-right : 0 !important
-
-
-/*
- * Detalle de Projecto
- */
-.singleDetailProject 
-	padding : 70px 0
+//Título 
+.title-project
+	background: #000
+	color     : #fff
+	font-size : 20px
+	margin    : 10px 0 0
+	padding   : 8px 30px
