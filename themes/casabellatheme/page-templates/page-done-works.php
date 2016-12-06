@@ -137,6 +137,11 @@ $first_project = count($all_projects) > 0 ? $all_projects[0] : false; ?>
 
 					<?php endif; ?>
 
+					<!-- Espacio --> <br/>
+
+					<!-- Contenido -->
+					<?= apply_filters( 'the_content' , $first_project->post_content ); ?>
+
 				<?php /*Si no hay projecto */ else: ?>
 
 					<div class="alert alert-success" role="alert">
@@ -145,12 +150,6 @@ $first_project = count($all_projects) > 0 ? $all_projects[0] : false; ?>
 					</div>
 
 				<?php endif; ?>
-
-
-				<!-- Espacio --> <br/>
-
-				<!-- Contenido -->
-				<?= apply_filters( 'the_content' , $first_project->post_content ); ?>
 				
 			</section> <!-- /.col-xs-12 col-sm-8 -->
 			
