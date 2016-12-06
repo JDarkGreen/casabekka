@@ -1,0 +1,66 @@
+
+/*
+ * File : Home Archivo
+ * Contiene : Todos lo estilos relacionados 
+ * a la sección / página - HOME
+ */
+
+/*
+ * HOME SLIDER
+ */
+#carousel-home
+	//Texto de Slider 
+	.contentTextSlider
+		color      : #fff
+		font-family: 'Montserrat', sans-serif
+		z-index    : 999
+
+		h1 , h2 , h3 , h4 , p
+			background    : rgba(0,0,0,.5)
+			font-size     : 35px
+			font-weight   : 600
+			letter-spacing: -2px
+			line-height   : 1em
+			padding       : 14px 16px
+			position      : relative
+
+	.tparrows
+		background: rgba(255,255,255,.7)
+		height    : 55px
+		padding   : 8px 0
+		width     : 32px 
+		//before
+		&:before 
+			color    : black 
+			font-size: 20px
+
+	//bullet
+	.tp-bullet
+		+border-radius( 50% )
+		+transition( all 500ms ease )
+		background: white 
+
+		&:hover , &.selected 
+			background : #FF8600
+
+//Btn Slider Home
+#btn-slider-home
+	background     : #0031E0
+	color          : white 
+	display        : inline-block 
+	font-family    : 'Helvetica57'
+	font-size      : 16px !important
+	line-height    : 1em 
+	margin         : 27px 0 0 0
+	max-width      : 130px
+	padding        : 15px 14px
+	text-decoration: none 
+	width          : 100%
+	+border-radius( 6px )
+
+/*
+ * SECTION MISCELANEO
+ */
+
+#pageInicioMiscelaneo	
+	margin : 70px auto 

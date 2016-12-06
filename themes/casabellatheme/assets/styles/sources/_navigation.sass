@@ -1,0 +1,78 @@
+
+/*
+ * File : Navegación Archivo
+ * Contiene : Todos lo estilos relacionados 
+ * a la sección / página - Navegación
+ */
+ 
+
+//Navegación
+#main-navigation 
+	background : #FF8600
+	ul
+		list-style-type: none 
+		margin         : 0 
+		padding        : 0
+
+		&.main-menu 
+			li 
+				border-right: 1px solid rgba(255,255,255,.6)
+				display     : inline-block 
+				position    : relative 
+				a 
+					color          : #000000
+					display        : block 
+					font-size      : 14px 
+					line-height    : 1em
+					padding        : 18px 35px
+					text-decoration: none !important
+					+transition( all 600ms ease-in-out )
+				
+				//active and hover
+				&:hover , &.current-menu-item , &.current_page_item 				a 
+					color : white 
+
+				//hover
+				&:hover 
+
+					ul.sub-menu
+						+opacity( 1 )
+						top       : 100%
+						visibility: visible
+						z-index   : 99999999
+
+		&.sub-menu
+			+opacity(0)
+			+transition( all 800ms ease-in-out )
+			background   : rgba(0,0,0,.6)
+			border-bottom: 4px solid #FF8729
+			border-top   : 4px solid #FF8729
+			left         : 0
+			margin       : 10px auto
+			position     : absolute
+			top          : 140%
+			visibility   : hidden
+			z-index      : -99999999
+
+			li 
+				display : block
+				a 
+					background: #000
+					border    : none
+					color     : #fff
+					display   : block 
+					font-size : 15px
+					margin    : 0 auto
+					padding   : 14px
+					+transition( all 700ms ease )
+
+				//hover and active
+				&:hover , &.current-menu-item , &.current_page_item 
+
+					a 
+						background: #ffffff
+						color     : black 
+
+
+
+

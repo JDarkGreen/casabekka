@@ -1,0 +1,164 @@
+@import 'https://fonts.googleapis.com/css?family=Ubuntu';
+
+/*keyframes*/
+@keyframes outline-pulse
+{
+	0%  { outline: 3px solid #A4C837;  }
+	50% { outline-offset: 4px;  }
+	90% { outline-offset: 0px; outline: 4px solid transparent; }
+	100%{ outline       : 0px solid transparent; }
+}
+
+@-moz-keyframes outline-pulse
+{
+	0%  { outline: 3px solid #A4C837;  }
+	50% { outline-offset: 4px;  }
+	90% { outline-offset: 0px; outline: 4px solid transparent; }
+	100%{ outline       : 0px solid transparent; }
+}
+
+/** [ Título de Opciones ]**/
+.title-options{ 
+	color      : white; 
+	font-size  : 30px; 
+	text-shadow: 2px 2px 4px #004076 , 1px 1px 4px #004076; 
+}
+
+/** [ Menu de Opciones ]**/
+.options__menu{ 
+	align-items    : center; 
+	display        : flex; 
+	flex-wrap      : wrap;
+	justify-content: space-around;
+}
+
+.options__menu a{
+	align-items    : center;
+	background     : #004076;
+	box-sizing     : border-box;
+	color          : white;
+	display        : flex;
+	font-size      : 20px;
+	height         : 130px;
+	justify-content: center;
+	margin         : 0 30px 30px 0;
+	opacity        : .8;
+	padding        : 10px;
+	text-align     : center;
+	text-decoration: none !important;
+	transition     : color,background-color 500ms ease-in-out;
+	width          : calc( (100%/3) - ( (2*30px)/3 ) );
+}
+
+/* Terceros y últimos elementos */
+.options__menu a:nth-child(3n) , .options__menu a:last-child{
+	margin-right: 0;	
+}
+
+/* Variaciones de fondo */
+.options__menu a.bg-danger{ 
+	background         : url('../img/sprite.png');
+	background-position: -350px 0;
+}
+.options__menu a.bg-social{ 
+	background         : url('../img/sprite.png');
+	background-position: 0 0;
+	color              : black;
+	text-shadow        : 1px 1px 8px white, -1px -1px 8px white;
+}
+.options__menu a.bg-data{ 
+	background         : url('../img/sprite.png');
+	background-position: -700px 0;
+	text-shadow        : 1px 1px 8px blue, -1px -1px 8px blue;
+}
+
+
+/*Active and hover*/
+.options__menu a:hover , .options__menu a.active {
+	animation      : outline-pulse 1.2s ease-in infinite;
+	background     : black;
+	opacity        : 1;
+	outline-offset : 4px;
+	border         : none;
+	box-shadow     : none;
+	outline        : none;
+	text-decoration: none !important; 
+	color          : #A4C837;
+	text-shadow    : none !important;
+}
+
+/*------------------------------
+** FONDO DE ADMINISTRADOR EN SECCION DE OPCIONES
+*------------------------------*/
+
+.containerSectionOptions
+{
+	background     : url('../img/paisajes.jpg') no-repeat;
+	background-size: cover;
+	bottom         : 0;
+	box-sizing     : border-box;
+	height         : 800px;
+	left           : 0;
+	padding        : 30px;
+	position       : absolute;
+	right          : 0;
+	top            : 0;
+}
+
+.containerSectionOptions input , .containerSectionOptions textarea
+{
+	font-family: 'Ubuntu', sans-serif;
+}
+
+/**[ Inputs y textarea en opciones del tema ]**/
+input.input-field{
+	width             : 300px;
+	border-bottom      : 4px solid gray;
+	-moz-transition   : all 0.6s ease-in-out;
+	-ms-transition    : all 0.6s ease-in-out;
+	-o-transition     : all 0.6s ease-in-out;
+	-webkit-transition: all 0.6s ease-in-out;
+	outline           : none !important;
+}
+
+textarea.textarea-field
+{
+	width             : 550px;
+	max-height        : 220px;
+	height            : 220px;
+	outline           : none !important;
+	border-bottom     : 4px solid gray;
+	-moz-transition   : all 0.6s ease-in-out;
+	-ms-transition    : all 0.6s ease-in-out;
+	-o-transition     : all 0.6s ease-in-out;
+	-webkit-transition: all 0.6s ease-in-out;
+}
+
+input.input-field:focus , textarea.textarea-field:focus
+{
+	outline: 0px !important;
+	padding: 10px;
+}
+
+
+/****
+*** ESTILOS GALERIA DE IMÁGENES
+*****************************************************************/
+
+ul#js-containerSortableGallery li
+{
+	width         : 202px; 
+	height        : 120px; 
+	margin        : 0 10px 20px; 
+	display       : inline-block; 
+	vertical-align: top; 
+	position      : relative; 
+	float         : left; 
+	border        : 1px dotted;
+}
+
+.highlight
+{
+	background: black;
+	border    : 3px solid red !important;
+}

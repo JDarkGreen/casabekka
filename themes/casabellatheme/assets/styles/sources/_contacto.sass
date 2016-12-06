@@ -1,0 +1,114 @@
+
+/*
+ * File : Contacto Archivo
+ * Contiene : Todos lo estilos relacionados 
+ * a la sección / página - Contacto
+ */
+
+/*
+ * Titulos Contacto
+ */
+.title-contact
+	font-size  : 40px
+	line-height: 1em
+
+/*
+ * Item de Contacto
+ */
+.itemContact
+	font-size : 14px
+	//Título
+	h2 
+		color      : rgba(0,0,0,.8)
+		font-size  : 16px 
+		font-weight: 600
+		margin     : 0 auto 23px
+
+	//Clase Featured
+	.featured
+		color : #002EE0
+
+
+//Mapa
+#canvas-map
+	+box-shadow( 0px 0px 15px 3px rgba(0,0,0,.2) )
+	border: 6px solid white 
+	height: 290px
+	margin: 45px 0 
+	width : 100%
+
+/**[ Menú de Contacto ]**/
+ul.menuContacto
+	list-style-type: none 	
+	margin         : 0 
+	padding        : 0 
+	li 
+		color      : black 
+		font-family: "SerifBeta", sans-serif
+		font-weight: 600
+		margin     : 0 auto 10px
+
+		//Clase mas espacio
+		&.more-space 
+			margin: 24px 0
+
+		//Icono
+		i.icon-contact
+			+border-radius( 50% )
+			align-items    : center 
+			border         : 1px solid silver 
+			color          : #D0A63E
+			display        : inline-flex 
+			height         : 51px 
+			justify-content: center
+			margin         : 0 16px 0 0
+			vertical-align : middle
+			width          : 51px
+
+		//Párrafo
+		p
+			display       : inline-block
+			margin        : 0 
+			vertical-align: middle 
+
+		//Span
+		span 
+			color : #D0A63E
+
+/**[ Sección de Formulario ]**/
+.pageContacto__formulary
+	background: #F0F0F0
+	padding   : 40px 0 60px
+
+//Formulario
+#form-contacto
+	font-family: 'Merriweather', serif
+	margin     : 0 auto
+	max-width  : 780px
+	width      : 100%
+
+	//Título
+	h2.title-formulary
+		font-family: "Arial" , sans-serif
+		margin     : 0 auto 30px
+
+//Inputs y textareas
+.pageContacto__form__group
+	border-bottom: 1px solid rgba(0,0,0,.1)
+	font-style   : italic 
+	//Grupo especial
+	&.special-group 
+		width : 50%
+
+	input , textarea
+		border     : none 
+		color      : #5E5E5E
+		font-size  : 18px
+		line-height: 1em 
+		outline    : 0px !important
+		padding    : 20px 16px 11px
+		width      : 100%
+	//only textarea 
+	textarea 
+		height    : 88px
+		max-height: 88px

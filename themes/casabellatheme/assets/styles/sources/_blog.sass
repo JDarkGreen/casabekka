@@ -1,0 +1,74 @@
+
+/*
+ * File : Blog Archivo
+ * Contiene : Todos lo estilos relacionados 
+ * a la sección / página - Blog
+ */
+
+//Container of Post
+#container-article-preview
+	min-height : 530px
+
+//Preview de Post
+.PreviewPost
+	box-sizing  : border-box
+	color       : #545454
+	display     : inline-block 
+	font-family : "Open Sans", sans-serif
+	width       : 100%
+
+	//Ultimo Elemento
+	&:last-child
+		margin-right : 0
+
+	//Imágen
+	figure.featured-image
+		border    : 1px solid rgba(0,0,0,.1)
+		margin    : 0 auto 33px
+		max-height: 198px
+		overflow  : hidden
+
+		img 
+			+transition( all 700ms ease )
+		//:hover
+		&:hover 
+			img 
+				+scale( 1.2 )
+	//Título
+	h2 
+		color      : #FF7200
+		font-size  : 18px
+		font-weight: 700
+
+	//Párrafo
+	p 
+		color    : black 
+		font-size: 14px
+
+	//Link 
+	a.read-more
+		background     : #353535
+		color          : white 
+		font-size      : 14px
+		padding        : 10px 20px 
+		text-decoration: none 
+
+//Dos Columnas 
+.PreviewPost--box
+	margin   : 0 20px 36px 0
+	max-width: calc( 100%/2 - ( 20px/2) )
+	
+//Tres Columnas 
+.PreviewPost--box-page
+	float    : left 
+	margin   : 0 15px 36px 0
+	max-width: calc( 100%/3 - ( (2*15px) / 3 ) )
+
+	&:nth-child(3n)
+		margin-right : 0
+
+
+//Detalles de Post
+.singleDetailPost
+	.featured-image 
+		margin : 0 auto 20px

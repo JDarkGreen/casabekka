@@ -1,0 +1,33 @@
+
+/*
+ * File : Categorias Archivo
+ * Contiene : Todos lo estilos relacionados 
+ * a la sección / página - Categorias
+ */
+
+
+.sectionCategoryItems
+	padding : 0 50px
+
+	h2
+		font-family: "Helvetica57"
+		margin     : 0 auto 25px
+
+	.item-category
+		+box-shadow( inset 0 0 0 0 transparent )
+		+transition( box-shadow 700ms ease-in-out )
+		border-bottom  : 2px solid white 
+		box-sizing     : border-box
+		color          : white 
+		display        : block 
+		font-size      : 15px
+		line-height    : 1em
+		padding        : 17px 22px
+		text-decoration: none !important
+		//hover
+		&:hover 
+			+box-shadow( inset 400px 0 0 0 black )
+
+//Categorías del Blog
+.container-categories--blog
+	background: rgba(21,21,21,.7)

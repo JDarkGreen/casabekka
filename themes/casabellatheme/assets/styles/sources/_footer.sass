@@ -1,0 +1,106 @@
+
+/*
+ * File : Footer Archivo
+ * Contiene : Todos lo estilos relacionados 
+ * a la sección / página - Footer
+ */
+
+#mainFooter
+	background-image: url('../images/backgrounds/footer_construccion_mantenimiento.jpg')
+	box-sizing      : border-box
+	background-size : cover
+	color           : white
+	min-height      : 270px
+	padding         : 40px 0 
+
+	p , ul 
+		font-size : 13px
+
+
+/* Títulos en Footer */
+.title-footer
+	font-size  : 20px
+	font-weight: 700
+	margin     : 0 auto 40px
+	position   : relative 
+	&:after 
+		background: white
+		bottom    : -8px 
+		height    : 1px 
+		left      : 0 
+		position  : absolute
+		width     : 111px
+		content   : ""
+
+/*-- Logo Footer */
+#logo-footer
+	margin : 0 auto 35px
+
+
+/*
+ * CONTENEDORES -- FOOTER 
+ */
+
+//Information
+#item-footer-information
+	border-right: 1px solid white 
+	padding     : 0 75px 0 0
+
+//Datos de Contacto
+#item-footer-contact-data
+	padding : 0 0 0 50px
+
+
+/*
+ * MENU LISTA 
+ */
+#menu-data-footer
+	color          : white
+	list-style-type: none 
+	margin         : 0
+	padding        : 0 0 0 25px
+	li 
+		margin : 0 auto 11px
+		i 
+			font-size: 16px
+			margin   : 0 8px 0 -25px
+			overflow : hidden
+			width    : 16px
+		p 
+			display       : inline-block
+			margin        : 0
+			vertical-align: top 
+
+/*
+ * Menu Footer Redes Sociales
+ */
+#main-footer-social-link
+	list-style-type: none 
+	margin         : 0
+	padding        : 0 
+	li 
+		display: inline-block
+		padding: 0 7px  
+		a 
+			color    : white 
+			display  : block 
+			font-size: 20px 
+			height   : 20px 
+			width    : 20px 
+			i 	
+				+transition(all 500ms ease)
+			//hover
+			&:hover 
+				i 
+					+rotateY(360deg)
+
+/*
+ * Section Developer
+ */
+#section-developer
+	background: #444444
+	color     : white
+	font-size : 13px
+	padding   : 8px 0
+	a
+		color :  white

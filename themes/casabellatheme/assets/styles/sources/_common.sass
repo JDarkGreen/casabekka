@@ -1,0 +1,341 @@
+
+/*
+ * File : Secciones Comunes Archivo
+ * Contiene : Todos lo estilos relacionados 
+ * a la sección / página - Comunes 
+ */
+
+/*
+ * RESET
+ */
+
+
+/*
+ * DISPLAYS 
+ */
+.flexible 
+	display    : flex 
+.flexible-wrap 
+	flex-wrap  : wrap 
+.align-items-center 
+	align-items: center 
+
+.space-between 
+	justify-content : space-between 
+
+.justify-center
+	justify-content : center
+
+
+/*
+ * POSICIONES 
+ */
+
+//Relativo
+.relative 
+	position: relative 
+
+/*
+ * WRAPPER O CONTENEDORES CON MEDIDA
+ */
+
+//Contenedor de Contenido Página
+.pageContentLayout
+	padding : 45px 0
+
+.wrapperLayoutPage
+	display  : block 
+	margin   : 0 auto 
+	max-width: 1050px 
+	width    : 100%
+
+
+/*
+ * BOTONES 
+ */
+
+//Ver Más
+.btn-show-more
+	+border-radius( 5px )
+	+box-shadow( inset 0 0 0 0 transparent )
+	+transition( box-shadow 500ms ease-in , color 600ms ease )
+	//hover 
+	background     : #0031E0
+	color          : white 
+	display        : inline-block 
+	font-family    : "Arial" , sans-serif 
+	font-size      : 16px 
+	margin         : 0 auto 
+	padding        : 11px 25px
+	text-decoration: none !important 
+	text-transform : uppercase 
+
+	&:hover 
+		+box-shadow( inset 300px 0 0 0 black )
+		color: white 
+
+//Color White
+.btn-show-more--white
+	background: transparent 
+	border    : 1px solid white 
+	color     : white 
+	margin    : 0
+
+/*
+ * REDES SOCIALES 
+ */
+#social-menu-link
+	display: inline-block
+	margin : 0 
+	padding: 0
+	li 
+		display : inline-block
+		padding : 0 5px  
+		a 
+			+transition( all 500ms ease-in )
+			color  : #0031E0
+			display: block 
+
+
+/*
+ * TÍTULOS PÁGINAS - SECCIONES - POST
+ */
+.titleOfSection
+	font-family: "Arial" , sans-serif
+	font-size  : 28px
+	font-weight: 600
+	margin     : 0 auto 30px 
+	position   : relative
+	&:before 
+		background: #FF8600
+		bottom    : -7px
+		content   : ""
+		height    : 2.5px 
+		left      : 0
+		position  : absolute 
+		width     : 122px
+
+.titleOfSection--text-white
+	color : white
+
+.titleOfSection--orange
+	color : #FF7200
+
+/* 
+ *  INDICADORES DE GALERÍA
+ */
+.gallery_indicators 
+	a 
+		+border-radius(50%)
+		+transition( all 500ms ease )
+		border : 1px solid black  
+		display: inline-block 
+		height : 14px 
+		margin : 0 3px 
+		width  : 14px
+		&.hover , &.active 
+			background: #FF385E
+
+/*
+ * BANNER DE PÁGINAS Y / O TAXONOMÍAS
+ */
+
+//Banner Top de Página
+#section-banner-top
+	h2
+		+text-shadow( 1px 1px 5px black )
+		+translate(-50%,-50%)
+		color      : white
+		font-family: "Montserrat", sans-serif
+		font-size  : 35px
+		font-weight: 700
+		left       : 50%
+		margin     : 0
+		position   : absolute 
+		text-align : center 
+		top        : 50%
+
+
+//Banner de Página a Contacto
+#section-contact-strip
+	background: #FF8600
+	color     : white 
+	padding   : 15px 0 
+	
+	//Items
+	.item-contact-strip
+		display       : inline-block 
+		font-weight   : 700
+		margin        : 0 5px 
+		vertical-align: middle
+	p 
+		font-size : 20px
+
+	//button
+	a 
+		border         : 2px solid white 
+		color          : white 
+		font-size      : 18px
+		line-height    : 1em
+		padding        : 8px 27px 
+		text-decoration: none 
+		+transition( all 500ms ease )
+
+		//:hover 
+		&:hover
+			+scale( 1.05 )		 
+
+//Títulos
+.title-banner-tax
+	background : #666666
+	bottom     : 18px 
+	color      : white 
+	font-family: "Helvetica57"
+	font-size  : 27px
+	line-height: 1
+	margin     : 0
+	padding    : 13px 60px
+	position   : absolute 
+	right      : 193px 
+	z-index    : 9999
+
+//Flechas
+.arrow-banner-tax
+	height     : 58px
+	position   : absolute
+	text-indent: -2000px
+	top        : 42%
+	width      : 34px
+	z-index    : 999
+	+transition(all 500ms ease)
+	//hover 
+	&:hover 
+		+opacity(.7)
+
+.arrow-banner-tax--prev
+	background: url('../images/arrow-left.png') no-repeat
+	left      : 0
+.arrow-banner-tax--next
+	background: url('../images/arrow-right.png') no-repeat
+	right     : 0
+
+/*
+ * BREADCRUMBS
+ */
+#breadcrumbs
+	color          : black 
+	font-family    : "Helvetica57"
+	list-style-type: none
+	margin         : 16px 0 
+	padding        : 0 
+	li 
+		display  : inline-block 
+		font-size: 15px
+		padding  : 0 24px 0 0
+		position : relative 
+		//after
+		&:after 
+			+translate(-50%,-50%)
+			color      : black 
+			content    : ">"
+			font-size  : 13px 
+			line-height: 1em
+			position   : absolute
+			right      : 3px
+			top        : 50%
+		//last element
+		&:last-child 
+			&:after 
+				content : ''
+		a 
+			color          : black 
+			display        : block 
+			text-decoration: none 
+			+transition( all 500ms ease )
+			//hover
+			&:hover 
+				color : #FF385E
+
+
+/*
+ * PAGINADOR 
+ */
+.sectionPagination
+	margin : 20px auto 0
+	a 
+		+transition( all 500ms ease )
+		border         : 1px solid gray
+		color          : white 
+		margin         : 0 2px 0 0
+		padding        : 4px 
+		text-decoration: none !important 
+
+		//hover  and active 
+		&:hover , &.active
+			background : #002EE0
+
+		//Paginator
+		&.arrow-paginator
+			color : gray
+
+		//disabled 
+		&.disabled
+			+opacity(.3)
+			cursor        : none 
+			pointer-events: none 
+			position      : relative
+
+/* 
+ * COMPARTIR - SECCION SINGLE /PAGE
+ */
+.sectionCommonShareLinks
+	ul 
+		list-style-type: none 
+		margin         : 0
+		padding        : 0
+		li 
+			display: inline-block
+			padding: 0 2px
+			//Primer Elemento
+			&:first-child
+				font-size: 13px 
+				padding  : 0 10px 0 0
+			//Item - a 
+			a 
+				background     : #E3E8E9 
+				color          : #A6A6A8
+				display        : inline-block 
+				height         : 21px 
+				justify-content: center  
+				text-align     : center
+				text-decoration: none 
+				width          : 21px
+				+transition( all 500ms ease-in-out )
+				//Hover
+				&:hover
+					color: white
+				//Clases Internas
+				&.social--fb
+					&:hover 
+						background: #11539C
+				&.social--tw
+					&:hover 
+						background: #00ACED
+				&.social--gplus
+					&:hover 
+						background: #DB4A39
+
+
+/*
+ * FACEBOOK CONTAINER
+ */
+#facebookContainer
+	+border-radius(6px)
+	border  : 8px solid black
+	overflow: hidden 
+
+/*
+ * SECCIÒN DE CLIENTES
+ */
+#section-our-clients
+	margin : 50px auto 30px

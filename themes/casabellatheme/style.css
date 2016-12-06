@@ -1,0 +1,42 @@
+/*
+Theme Name: Casabella Theme
+Theme URI: 
+Author: JDarkgreen - Ingenioart
+Author URI: 
+Description: Casabella Theme
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags       : 
+Text Domain: kariel-theme
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what 
+you've learned with others.
+*/
+
+/*
+ * Estilos CSS de terceros librerías (vendor)
+ * Incluye 
+ * 1.- Bootstrap
+ * 2.- Owl Carousel
+ * 3.- Fancybox
+ * 4.- Parsley
+ * 5.- Rev Slider
+ */
+
+@import url("assets/styles/vendor/vendorcss.min.css"); 
+
+/* Font Awesome */
+@import url("assets/styles/vendor/font-awesome/css/font-awesome.min.css"); 
+
+/* Sidebar Transitions (For mobile version ) */
+@import url("assets/styles/vendor/sidebar-transitions/normalize.css"); 
+@import url("assets/styles/vendor/sidebar-transitions/component.css"); 
+
+/*
+ * Estilos Personalizados
+ */
+ 
+@import url("assets/styles/fonts.css"); 
+@import url("assets/styles/master.css"); 

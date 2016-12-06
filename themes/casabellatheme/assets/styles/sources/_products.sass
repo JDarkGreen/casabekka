@@ -1,0 +1,123 @@
+
+/*
+ * File : Productos Archivo
+ * Contiene : Todos lo estilos relacionados 
+ * a la sección / página - Productos
+ */
+
+//Preview
+#sectionFeaturedProducts
+	margin : 35px auto 70px
+
+//Items Preview
+.itemProductPreview
+	margin: 0 26px 69px 0
+	width : calc( 100%/4 - ((3*26px)/4) )
+	+transition( all 600ms ease )
+
+	a 
+		text-decoration : none !important
+
+	.bg-container
+		border: 1px solid #C5C5C5
+		margin: 0 auto 13px 
+		
+	figure 
+		align-items    : center 
+		display        : flex 
+		height         : 182px 
+		justify-content: center 
+		overflow       : hidden 
+
+		img 
+			+transition( all 500ms ease-in )
+
+	.content-info
+		color      : black 
+		font-family: "Arial" , sans-serif
+		padding    : 0 0 13px 
+		p , ul 
+			font-size : 20px 
+		h2 
+			margin   : 0 auto 5px 
+			font-size: 14px 
+		span 
+			display  : block 
+			font-size: 14px 
+
+	//cuartos y ultimos elementos 
+	&:nth-child(4n) , &:last-child
+		margin-right : 0
+
+	//hover 
+	&:hover
+		+box-shadow(1px -4px 6px rgba(0,0,0,.3) ) 
+		
+		.bg-container 
+			border : 1px solid transparent 
+
+		img 
+			+scale(1.1)
+
+
+//Buttom details producto
+.btn-details-product	
+	+border-radius( 10px )
+	+box-shadow( inset 0 0 0 0 transparent )
+	+transition( box-shadow 500ms ease-in , color 600ms ease )
+	//hover 
+	background     : #DFDFE1
+	color          : black 
+	display        : block 
+	font-family    : "Arial" , sans-serif 
+	font-size      : 14px 
+	margin         : 0 auto 
+	padding        : 6px 0 
+	text-decoration: none !important 
+	text-transform : uppercase 
+	width          : 90%
+	&:hover 
+		+box-shadow( inset 300px 0 0 0 black )
+		color: white 
+
+//Single Detail Product
+.singleDetailProduct
+	
+	//Imágen Destacada
+	.featured-image 
+		border : 1px solid #C5C5C5
+
+	//Indicadores de galería
+	.gallery_indicator 
+		border    : 1px solid #C5C5C5
+		box-sizing: border-box
+		display   : inline-block 
+		padding   : 1px
+
+//Título de Producto
+.productTitle
+	font-family: 'Helvetica57'
+	font-size  : 16px
+	font-weight: 600
+//Codigo
+.productCode
+	font-family: 'Helvetica57'
+	font-size  : 14px
+	font-weight: 600
+
+//Detalles Títulos
+.detailTitle
+	font-size  : 14px
+	font-family: 'Helvetica57'
+	font-weight: 600
+
+//Item color
+.item-color
+	i
+		+border-radius(50%)
+		border        : 0.5px solid rgba(0,0,0,.1)
+		display       : inline-block 
+		height        : 15px 
+		margin        : 0 5px 0 0
+		vertical-align: middle  
+		width         : 15px

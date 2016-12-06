@@ -1,0 +1,49 @@
+/**
+** Estilos Para el login de wordpress.
+ */
+
+/**
+ * Keyframes
+ */
+
+@keyframes slide
+{
+	0%{
+    	transform: translate3d(0, 0, 0);
+  	}
+  	100%{
+    	transform: translate3d( -1440px , 0 , 0);
+  	}
+}
+
+body.login{ overflow: hidden; }
+
+body.login:after
+{
+	animation      : slide 120s linear infinite;
+	background     : url('../img/fondo_login.jpg') repeat-x;
+	background-size: contain;
+	bottom         : 0;
+	content        : "";
+	left           : 0;
+	position       : absolute;
+	right          : 0;
+	top            : 0;
+	width          : 5000px;
+	z-index        : -1;
+}
+
+
+/**
+ * LOGIN 
+ */
+.login h1 a
+{
+	background: url('../img/logo.png') no-repeat;
+	height    : 80px;
+	width     : 205px;
+}
+
+
+.login form { background: url('../img/fondo_form.png'); }
+.login label{ color: white; text-shadow : 1px 1px 4px black; }
