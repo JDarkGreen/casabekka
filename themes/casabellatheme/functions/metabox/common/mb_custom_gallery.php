@@ -38,32 +38,49 @@ function cd_mb_attached_images_cb( $post )
 
     $mb_image_gallery = get_post_meta( $post->ID, 'mb_image_gallery' , true );
 
-?>
+    /* Obtener todos los items */
+    $mb_image_gallery = explode( ',' , $mb_image_gallery );
+
+    //eliminar valores negativos
+    $mb_image_gallery = array_diff(  $mb_image_gallery , array(-1,'-1') );
+
+    //Eliminar espacios en blanco 
+    $mb_image_gallery = array_filter( $mb_image_gallery , function($var) {
+        return trim($var); });
+
+    /*Variables para almacenar despues*/
+    $array_ids_images  = array();
+    $string_ids_images = '';
+
+    /* Hacer un recorrido y comprobar si archivo existe y agregarlo */
+    foreach( $mb_image_gallery as $attachment_id ):
+
+        /*Si se encuentra el archivo agregarlo al array */
+        if( wp_get_attachment_metadata( $attachment_id ) ) :
+
+            $array_ids_images[] = $attachment_id;
+
+        endif;
+
+    endforeach;  
+
+    /* Concatenar todos los ids encontrados correctamente */
+    $string_ids_images = implode( ',' , $array_ids_images );  ?>
 
     <section class="js-containerParentGallery">
 
         <!-- Input Oculto -->
-        <input type="hidden" id="field_customize_gallery" name="mb_image_gallery" value="<?= trim($mb_image_gallery); ?>" />
+        <input type="hidden" id="field_customize_gallery" name="mb_image_gallery" value="<?= trim($string_ids_images); ?>" />
 
         <!-- Contenedor Sorteable -->
         <ul id="js-containerSortableGallery" class="js-containerSortableGallery" data-field-id="field_customize_gallery">
 
             <?php 
-                //convertir en arreglo
-                $mb_image_gallery = explode(',', $mb_image_gallery ); 
-                //eliminar valores negativos
-                $mb_image_gallery = array_diff( $mb_image_gallery , array(-1) );
-                //Eliminar espacios en blanco 
-                $mb_image_gallery = array_filter( $mb_image_gallery , function($var) {
-                    return trim($var);
-                });
-
                 #Recorrido de id de imagenes
-                foreach ( $mb_image_gallery as $meta_img_id ) : 
+                foreach ( $array_ids_images as $meta_img_id ) : 
 
-                    #Conseguir todos los datos de este item
-                    $item = get_post( $meta_img_id ); 
-            ?>
+                #Conseguir todos los datos de este item
+                $item = get_post( $meta_img_id );  ?>
 
                 <!-- Nota: colocar data-id-img es referente al id de la imagen -->
                 <li class='ui-state-default' data-id-element="<?= $item->ID ?>">

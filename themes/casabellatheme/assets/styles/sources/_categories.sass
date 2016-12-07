@@ -6,16 +6,12 @@
  */
 
 
-.sectionCategoryItems
-	padding : 0 50px
-
-	h2
-		font-family: "Helvetica57"
-		margin     : 0 auto 25px
+.sectionCategory
 
 	.item-category
 		+box-shadow( inset 0 0 0 0 transparent )
 		+transition( box-shadow 700ms ease-in-out )
+		background     : black 
 		border-bottom  : 2px solid white 
 		box-sizing     : border-box
 		color          : white 
@@ -26,8 +22,5 @@
 		text-decoration: none !important
 		//hover
 		&:hover 
-			+box-shadow( inset 400px 0 0 0 black )
-
-//Categorías del Blog
-.container-categories--blog
-	background: rgba(21,21,21,.7)
+			+box-shadow( inset 400px 0 0 0 #FF8600 )
+			color : black

@@ -63,6 +63,35 @@
 			color: #fff
 
 //Flechas de Carousel
+
+/*
+ * Para el carousel en general
+ */
+.arrow-services
+	+transition( all 200ms ease-in-out )
+	align-items    : center
+	background     : #FF5D00
+	bottom         : 0 
+	color          : #fff
+	display        : flex
+	height         : 36px
+	justify-content: center
+	position       : absolute
+	text-decoration: none !important
+	top            : -60px
+	width          : 36px
+	z-index        : 99999
+
+	&.arrow--right 
+		right : 0
+
+	&.arrow--left
+		right : 40px
+
+
+/*
+ * Para detalles de Servicio
+ */
 .arrow-single-service
 	+transition( all 200ms ease-in-out )
 	align-items    : center

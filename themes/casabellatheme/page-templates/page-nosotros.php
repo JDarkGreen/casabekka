@@ -83,12 +83,7 @@ if(stream_resolve_include_path($path_banner)) include($path_banner); ?>
 	/*
 	 * Importar banner a contacto 
 	 */ 
-	include( locate_template('partials/common-section/section-contact-strip.php') ); 	
-
-	/*
-	 * Importar Secciòn Clientes
-	 */ 
-	include( locate_template('partials/common-section/section-our-clients.php') ); ?>
+	include( locate_template('partials/common-section/section-contact-strip.php') ); ?>
 
 </main> <!-- /.pageWrapper -->
 

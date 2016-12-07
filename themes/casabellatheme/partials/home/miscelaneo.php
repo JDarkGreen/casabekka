@@ -40,8 +40,17 @@ $entradas = get_posts( $args );  ?>
 					<article class="PreviewPost PreviewPost--box pull-xs-left">
 
 						<!-- Imagen -->
-						<figure class="featured-image">
+						<figure class="featured-image relative">
+
 							<a href="<?= get_permalink( $entrada->ID ); ?>" title="<?= $entrada->post_title; ?>">
+
+								<?php setlocale(LC_ALL,"es_ES@euro","es_ES","esp"); ?>
+								
+								<!-- Dia -->
+								<span class="post-date">
+									<?= date('d') . '<br/>' . utf8_encode(  strftime('%a') ); ?>
+								</span>
+
 								<img src="<?= $image_url; ?>" alt="<?= $image_alt ?>" class="img-fluid m-x-auto d-block" />
 							</a>
 						</figure> <!-- /. -->

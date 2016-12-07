@@ -65,7 +65,14 @@
               data-transform_out="y:50px;opacity:0;s:500;e:Power2.easeInOut;
               data-start="1000">
             
-   					  <?= apply_filters( 'the_content' , get_the_content() ); ?>
+   					  <?php 
+                $text_slider = apply_filters( 'the_content' , get_the_content() );
+
+                /* Reemplazar */
+                $new_text    = str_replace( array("<p>",'<p style="text-align: right;">') , array("<p><span>",'<p style="text-align: right;"><span>') , $text_slider );
+                echo $new_text;
+
+              ?>
 
               <div class="clearfix"></div>
 

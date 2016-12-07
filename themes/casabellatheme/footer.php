@@ -57,7 +57,7 @@ $footer_information = isset($options['footer_information']) ? $options['footer_i
 						<!-- Info Footer -->
 						<div class="col-xs-12 col-sm-6">
 
-							<p>Somos Casa Bella, una empresa de construcción y mantenimiento que ofrece la más alta calidad en servicios generales, tales como edificaciones, limpieza, instalaciones eléctricas, sistema drywall, entre otros. Para ello, contamos con personal altamente calificado y con experiencia en la realización de cada uno de los trabajos.</p>
+							<p>Somos Casa Bella, una empresa de construcción y mantenimiento que ofrece la más alta calidad en servicios generales, tales como edificaciones, limpieza, instalaciones eléctricas, sistema drywall, entre otros.</p>
 							
 						</div> <!-- /. -->
 						

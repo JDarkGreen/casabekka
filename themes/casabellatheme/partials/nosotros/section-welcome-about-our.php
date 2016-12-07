@@ -2,7 +2,13 @@
 /*
  * File: Section Welcome About Our
  * return html { despliega seccioón de bienvenida }
- */  ?>
+ */  
+
+//Página Nosotros requerida
+$page_require = get_page_by_title('nosotros');
+$link_to_page = !empty($page_require) ? get_permalink($page_require->ID) : '#';
+
+?>
 
 <section id="section-welcome-about-our">
 
@@ -19,6 +25,10 @@
 				</h2>
 
 				<p> Somos Casa Bella,  una empresa de construcción y mantenimiento que ofrece la más alta calidad en servicios generales, tales como edificaciones, limpieza, instalaciones eléctricas, sistema drywall, entre otros. Para ello, contamos con personal altamente calificado y con experiencia en la realización de cada uno de los trabajos.</p>
+
+				<a href="<?= $link_to_page; ?>" title="Casa Bella,  una empresa de construcción" class="btn-show-more text-uppercase">
+					<?= __( 'ver más' , LANG ); ?>
+				</a>
 				
 			</div> <!-- /.col-xs-12 col-sm- -->
 			

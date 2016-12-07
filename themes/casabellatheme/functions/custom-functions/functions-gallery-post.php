@@ -28,15 +28,30 @@ function get_gallery_post( $post_id  = null )
 		$array_id_images  = array_filter( $array_id_images );
 
 		//Eliminar elementos no deseados
-		$remove_array    = array( -1,'',' ');
+		$remove_array    = array( -1,'-1',' ');
 		$array_id_images = array_diff( $array_id_images , $remove_array );
+
+		/*Variable temporal ids de arrays */
+		$array_tmp_ids_images = array();
+
+		/* Hacer un recorrido y comprobar si archivo existe y agregarlo */
+	    foreach( $array_id_images as $attachment_id ):
+
+	        /*Si se encuentra el archivo agregarlo al array */
+	        if( wp_get_attachment_metadata( $attachment_id ) ) :
+
+	            $array_tmp_ids_images[] = $attachment_id;
+
+	        endif;
+
+	    endforeach;
 
 
 		//Setear los datos de todas las imágenes en un array
 		$container_array_images = array();
 
 		//Hacemos recorrido para setear
-		foreach ( $array_id_images as $item_img ) :
+		foreach ( $array_tmp_ids_images as $item_img ) :
 
 			//Conseguir todos los datos de este item
 			$item = get_post( $item_img  ); 

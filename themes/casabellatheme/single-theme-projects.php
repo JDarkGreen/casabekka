@@ -153,12 +153,7 @@ $all_projects = get_posts( $args );  ?>
 /*
  * Importar banner a contacto 
  */ 
-include( locate_template('partials/common-section/section-contact-strip.php') ); 	
-
-/*
- * Importar Secciòn Clientes
- */ 
-include( locate_template('partials/common-section/section-our-clients.php') );  ?>
+include( locate_template('partials/common-section/section-contact-strip.php') ); ?>
 
 </main> <!-- /.pageWrapper -->
 

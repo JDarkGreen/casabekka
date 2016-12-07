@@ -31,49 +31,45 @@
 
 //Mapa
 #canvas-map
-	+box-shadow( 0px 0px 15px 3px rgba(0,0,0,.2) )
-	border: 6px solid white 
-	height: 290px
-	margin: 45px 0 
+	height: 346px
+	margin: 20px 0 45px
 	width : 100%
 
+
 /**[ Menú de Contacto ]**/
-ul.menuContacto
-	list-style-type: none 	
-	margin         : 0 
-	padding        : 0 
+ul#menuContacto
+	list-style-type: none
+	margin         : 0 auto 122px
+	padding        : 0
 	li 
-		color      : black 
-		font-family: "SerifBeta", sans-serif
-		font-weight: 600
-		margin     : 0 auto 10px
+		margin: 0 auto 16px
+		
+		&.text-orange
+			color : #FF8729
 
-		//Clase mas espacio
-		&.more-space 
-			margin: 24px 0
+		i 
+			color     : #FF8729
+			font-size : 20px
+			height    : 20px
+			margin    : 0 17px 0 0
+			text-align: center
+			width     : 20px
 
-		//Icono
-		i.icon-contact
-			+border-radius( 50% )
-			align-items    : center 
-			border         : 1px solid silver 
-			color          : #D0A63E
-			display        : inline-flex 
-			height         : 51px 
-			justify-content: center
-			margin         : 0 16px 0 0
-			vertical-align : middle
-			width          : 51px
 
-		//Párrafo
-		p
-			display       : inline-block
-			margin        : 0 
-			vertical-align: middle 
+/* Menu de Redes Sociales */
+#menu-contact-social-link
+	list-style-type: none
+	margin         : 0 auto
+	padding        : 0
+	li 
+		display: inline-block
+		padding: 0 18px 0 0
+		a 
+			color    : #FF8729
+			font-size: 24px
 
-		//Span
-		span 
-			color : #D0A63E
+
+
 
 /**[ Sección de Formulario ]**/
 .pageContacto__formulary
@@ -82,10 +78,7 @@ ul.menuContacto
 
 //Formulario
 #form-contacto
-	font-family: 'Merriweather', serif
-	margin     : 0 auto
-	max-width  : 780px
-	width      : 100%
+	margin: 39px auto 0
 
 	//Título
 	h2.title-formulary
@@ -94,21 +87,21 @@ ul.menuContacto
 
 //Inputs y textareas
 .pageContacto__form__group
-	border-bottom: 1px solid rgba(0,0,0,.1)
-	font-style   : italic 
-	//Grupo especial
-	&.special-group 
-		width : 50%
+	margin : 0 auto 20px
 
 	input , textarea
-		border     : none 
-		color      : #5E5E5E
-		font-size  : 18px
-		line-height: 1em 
-		outline    : 0px !important
-		padding    : 20px 16px 11px
-		width      : 100%
+		border : 1px solid rgba(0,0,0,0.3)
+		padding: 5px 10px
+		width  : 100%
+
 	//only textarea 
 	textarea 
 		height    : 88px
 		max-height: 88px
+
+//Send Form
+#send-form
+	background: #FF8729
+	border    : none
+	color     : #fff
+	padding   : 8px 20px
