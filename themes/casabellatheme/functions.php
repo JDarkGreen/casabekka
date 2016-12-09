@@ -58,6 +58,11 @@ if( stream_resolve_include_path('admin/assets/custom-scripts.php') )
 if( stream_resolve_include_path('admin/theme-customizer-modal.php') )
 	include('admin/theme-customizer-modal.php');
 
+//PÁGINA OPCIONES DE TEMA v 2.0
+$path_options = realpath( dirname(__FILE__) . '/administrator/options-page.php' );
+if( $path_options ) 
+  include( $path_options );
+
 /*
  * Desabilitar barra de menu (solo en backend)
  */
